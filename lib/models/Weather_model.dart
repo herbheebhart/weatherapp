@@ -8,11 +8,11 @@ class Weather {
     required this.temperature,
     required this.mainCondition
   });
-  // method to get the jeason file
+  // method to get the weather information using json
   factory Weather.fromJson(Map<String, dynamic> json) {
     return Weather(
       cityName: json["name"],
-      temperature: json["main"]["temp"].toDoble(),
+      temperature: json["main"]["temp"].toDouble(),
       mainCondition: json["weather"][0]["main"],
     );
   }
